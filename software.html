@@ -1,0 +1,57 @@
+---
+layout: software
+title: Software
+---
+<section class="tools">
+  <!-- Loop Over Each Tool -->
+  {% for software in site.software %}
+    <!-- Software Block -->
+    <section class="software">
+      <!-- Software Logo -->
+      <div class="software_logo">
+        <img src="{{ software.image }}" alt="{{software.name}} Image">
+      </div>
+
+      <!-- Software Info -->
+      <div class="software_info">
+        <!-- Software Name -->
+        <a href="{{ software.repository_url }}" class="software_name">{{ software.name }}</a>
+
+        <!-- Software Warning Message -->
+        {% if software.warning %}
+          <p class="software_warning"> {{ software.warning}} ⚠️ </p>
+        {% endif %}
+
+        <!-- Software Version -->
+        <p>Version: {{   software.version   }}</p>
+
+        <!-- Software Update Date -->
+        <p>Updated: {{ software.update_date }}</p>
+
+        <!-- Software Content -->
+        <p class="software_description"> {{ software.content | strip_html}} </p>
+
+        <!-- Software Links -->
+        <div class="software_links">
+          <!-- Gitlab Code Repository -->
+          <div class="link">
+            <img src="/assets/images/gitlab_logo.png" alt="{{software.name}} Image" class="link_image">
+            <p class="link_name">Code</p>
+          </div>
+          <div class="divider">|</div>
+
+          <!-- ReadTheDocs Link -->
+          <div class="link">
+            <img src="/assets/images/readthedocs_logo.png" alt="{{software.name}} Image" class="link_image">
+            <p class="link_name">Documentation</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Bottom Border -->
+    {% if forloop.last == false %}
+    <hr class="software_line">
+    {% endif %}
+  {% endfor %}
+</section>

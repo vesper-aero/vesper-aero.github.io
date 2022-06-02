@@ -1,0 +1,26 @@
+collections:
+  software:
+    output: true
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
+  - scope:
+      path: ""
+      type: "softwares"
+    values:
+      layout: "software"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

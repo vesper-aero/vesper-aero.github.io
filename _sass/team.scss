@@ -1,0 +1,78 @@
+.team{
+    background-color: $background-color;
+    width: 100%;
+    overflow: auto;
+
+    .team_name {
+        font-family: $font-family;
+        color: white;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .developers{
+        display: grid;
+        grid-template-columns: 615px 615px;
+        grid-gap: 20px;
+        justify-content: space-between;
+        color: white;
+        overflow: auto;
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    .advisors{
+        display: grid;
+        grid-template-columns: 615px 615px;
+        grid-gap: 20px;
+        justify-content: space-between;
+        color: white;
+        overflow: auto;
+        max-width: $content_width;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .team_member {
+        overflow: auto;
+        background-color: white;
+        border-radius: 30px;
+        padding: 20px;
+        .member_image {
+            width: 40%;
+            float: left;
+            img{
+                width: 100%;
+                display: block;
+                border-radius: 20px;
+            }
+        }
+        .member_info {
+            width: 57%;
+            float: left;
+            margin-left: 2%;
+
+            color: black;
+            font-family: $font-family;
+            
+            .member_name {
+                font-size: large;
+                font-weight: bold;
+                padding-bottom: 2px;
+            }
+            .member_affil {
+                padding-bottom: 2px;
+            }
+            .member_org {
+                padding-bottom: 10px;
+            }
+            .member_role {
+                padding-bottom: 10px;
+            }
+            .member_focus {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+$nav-height: 70px;
+$nav-background: white;
+$nav-font-size: 20px;
+$nav-font-color: black;
+
+header {
+  overflow: auto;
+  width: 100%;
+
+  #header_box {  
+    width: 100%;
+    max-width: $content-width;
+    margin: 0px auto;
+    overflow: auto;
+
+    #logo {
+      float: left;
+    }
+    nav {
+      overflow: auto;
+      margin-top: 20px;
+      padding: 0;
+      border: 0;
+
+      ul {
+        list-style: none;
+        float: right;
+        li {
+          float: left;
+          position: relative;
+          a {
+            display: block;
+            color: white;
+            padding: 0 30px;
+            color: $nav-font-color;
+            text-decoration: none;
+            font-family:  $font-family;
+            &:hover {
+              color: gray;
+            }
+            &:not(:only-child):after {
+              padding-left: 4px;
+              content: ' ▾';
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $nav-background;
+  height: $nav-height;
+  width: $nav-height;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .nav-mobile {
+    display: block;
+  }
+  header{
+    #header_box{
+      width: 100%;
+
+      #logo {
+        float: left;
+      }
+
+      nav {
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px 0px;
+        ul {
+          display: none;
+          height: auto;
+          float: left;
+          li {
+            float: none;
+            a {
+              padding: 15px;
+              line-height: 20px;
+            }
+            ul li a {
+              padding-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+

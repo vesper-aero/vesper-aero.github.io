@@ -1,0 +1,90 @@
+#tool_image{
+    display: block;
+    margin: auto;
+    width: 750px;
+}
+
+.tools{
+    width: 100%;
+    background-color: $background-color;
+    margin: auto;
+    .software {
+        width: 95%;
+        max-width: $content-width;
+        margin: auto;
+        overflow: auto;
+        padding: 20px;
+
+        .software_logo {
+            float: left;
+            width: 22%;
+            padding: 0 1%;
+
+            img{
+                width: 100%;
+                display: block;
+                border-radius: 40px;
+            }
+        }
+        .software_info {
+            width: 74%;
+            float: right;
+            font-family: $font-family;
+            font-size: large;
+            color: white;
+            margin-right: 1%;
+
+            .software_name {
+                text-decoration: none;
+                color: white;
+                font-size: x-large;
+                font-weight: bold;
+            }
+            .software_warning {
+                float: right;
+            }
+            .software_description {
+                text-align: justify;
+            }
+            .software_links {
+                margin-top: 10px;
+                display: grid;
+                float: left;
+                color: white;
+                grid-template-columns: auto auto auto auto auto;
+                grid-gap: 10px;
+                justify-content: space-between;
+                overflow: auto;
+
+                .link{
+                    overflow:auto;
+                    &:hover {
+                        color: #E3E3E3;
+                    }
+                    .link_image {
+                        height: 20px;
+                        float: left;
+                        padding-right: 10px;
+                    }
+                    .link_name {
+                        float:right;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .software_line {
+        width: $content-width;
+        margin: auto;
+        height: 2px;
+        background-color: white;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: $breakpoint) {
+    #tool_image{
+        width: 95%;
+    }
+}

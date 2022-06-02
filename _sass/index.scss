@@ -1,0 +1,176 @@
+.animation{
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+
+    .graphic{
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.resources{
+    background-color: $background-color;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0;
+
+    .links{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-gap: 0px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+
+        .image{
+            .resource_name{
+                font-family: $font-family;
+                font-size: x-large;
+                color: black;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            img{
+                display: block;
+                overflow: auto;
+                width: 60%;
+                margin: 0 auto;
+            }
+
+        }
+        .vertical_line{
+            border-right: 3px solid white;
+        }
+    }
+}
+.features{
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0;
+
+    .feature{
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        display: block;
+
+        .feature_name{
+            font-family: $font-family;
+            font-size: x-large;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        img{
+            display: block;
+            overflow: auto;
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+}
+.scalability{
+    background-color: #64B7FF;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0;
+
+    .scalability_header{
+        font-family: $font-family;
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .scales{
+        display: grid;
+        grid-template-columns: 25% 12% 25% 12% 25%;
+        grid-gap: 0px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        align-items: center;
+
+        img{
+            display: block;
+            overflow: auto;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+.collaboration{
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0;
+
+    .collaborators{
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        display: block;
+
+        .collaborator_name{
+            font-family: $font-family;
+            font-size: x-large;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+        img{
+            display: block;
+            overflow: auto;
+            width: 25%;
+            margin: 0 auto;
+        }
+    }
+}
+.developed{
+    background-color: #C6E3FF;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0;
+
+    .developed_header{
+        font-family: $font-family;
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .labs{
+        display: grid;
+        // border: 1px solid red;
+        grid-template-columns: 40% 20% 40%;
+        grid-gap: 0px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $content_width;
+        margin: 0 auto;
+        align-items: center;
+
+        .image{
+            align-items: center;
+
+            img{
+                display: block;
+                overflow: auto;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+        }
+    }
+}

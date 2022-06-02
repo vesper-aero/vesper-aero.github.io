@@ -1,0 +1,32 @@
+---
+layout: default
+title: ContactUs
+---
+<h1>Interested in using or developing our tools?<br><br> Contact us!</h1>
+
+<section class="contact">
+
+  <form id="form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/bpacini@umich.edu" method="post">
+    <fieldset id="fs-frm-inputs">
+      <!-- Name -->
+      <label for="full-name">Full Name</label>
+      <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+
+      <!-- Email Address -->
+      <label for="email-address">Email Address</label>
+      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+
+      <!-- Company / Organization -->
+      <label for="company/organization">Company / Organization</label>
+      <input type="text" name="company/organization" id="company_org" placeholder="Company / Organization Name" required="">
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea rows="10" name="message" id="message" placeholder="Message" required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+</section>

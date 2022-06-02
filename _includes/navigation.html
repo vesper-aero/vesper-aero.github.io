@@ -1,0 +1,20 @@
+<header>
+  <div id="header_box">
+    <div id="logo">
+      <img src="assets/images/logo.png" alt="vesper.aero logo" width="300">
+    </div>
+
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.link }}" target="{{ item.target }}">
+              {{ item.name }}
+          </a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

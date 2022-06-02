@@ -1,0 +1,25 @@
+// Global Variables
+$content-width: 1250px;
+$font-family:  Helvetica Neue;
+$background-color: #008AEF;
+$breakpoint: 799px;
+
+// Global Rules
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: $font-family;
+    text-align: center;
+    padding: 20px;
+}
+
+// Import Subfiles
+@import "navigation";
+@import "index";
+@import "footer";
+@import "software";
+@import "team";
+@import "contact";

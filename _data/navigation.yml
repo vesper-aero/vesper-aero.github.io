@@ -1,0 +1,15 @@
+- name: Home
+  link: /
+  target:
+- name: Software
+  link: /software.html
+  target:
+- name: Documentation
+  link: https://readthedocs.org/projects/bernardo-pacini-demo/
+  target: _blank
+- name: Team
+  link: /team.html
+  target:
+- name: Contact
+  link: /contact.html
+  target:

@@ -1,0 +1,33 @@
+---
+layout: team
+title: Team
+---
+<section class="team">
+    <h2 class="team_name">Developer Team</h2>
+    <div class="developers">
+        {% assign developers =  site.team | where: "role", "Developer" %}
+        {% for member in developers %}
+            {% include team_member.html 
+                name=member.name 
+                image=member.image
+                role=member.role 
+                affiliation=member.affiliation 
+                organization=member.organization 
+            %}
+        {% endfor %}
+    </div>
+    <h2 class="team_name">Project Advisors</h2>
+    <div class="advisors">
+        {% assign advisors =  site.team | where: "role", "Advisor" | reverse%}
+        {% for member in advisors %}
+            {% include team_member.html 
+                name=member.name
+                image=member.image
+                affiliation=member.affiliation 
+                organization=member.organization 
+                role=member.role 
+                focus=member.focus
+            %}
+        {% endfor %}
+    </div>
+</section>
